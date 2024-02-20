@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  spx:
+    build: .
+    volumes:
+      - ./LOG:/SPX/LOG
+      - ./ASSETS:/SPX/ASSETS
+    ports:
+      - "5656:5656"
