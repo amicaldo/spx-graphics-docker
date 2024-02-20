@@ -1,6 +1,8 @@
 # Use Ubuntu 20.04 as the base image
 FROM --platform=linux/amd64 ubuntu:20.04
 
+LABEL org.opencontainers.image.description="SPX Graphics is a free and open-source live graphics control application, designed by Tuomo for graphics enthusiasts in the fields of broadcast, streaming, and events production."
+
 # Set the working directory in the container
 WORKDIR /SPX
 
