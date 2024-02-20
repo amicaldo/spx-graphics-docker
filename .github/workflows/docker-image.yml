@@ -1,0 +1,15 @@
+name: SPX Image CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and tag the SPX Docker image
+        run: |
+          docker build . --file Dockerfile --tag spx:latest
+          docker build . --file Dockerfile --tag spx:v1.2.1
